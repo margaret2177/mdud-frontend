@@ -1,0 +1,15 @@
+.banner {
+  min-width: 100vw;
+  height: 320px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-self: center; */
+  /* background: url('https://dressupdarling.online/wp-content/uploads/2021/06/New-Project-49.jpg')
+    center/cover no-repeat; */
+  /* background: rebeccapurple; */
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

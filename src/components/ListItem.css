@@ -1,0 +1,28 @@
+.list-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px 20px;
+
+  height: 350px;
+  margin: 0 5px;
+  flex: 0 0 205px;
+}
+.li-thumbnail {
+  height: 240px;
+  background: pink;
+  border-radius: 4px;
+}
+.li-details {
+  display: flex;
+  flex-direction: column;
+
+  margin: 4px 0;
+}
+.li-title {
+  font-size: 16px;
+  color: #000;
+}
+.li-genre {
+  font-size: 13px;
+  color: #999;
+}

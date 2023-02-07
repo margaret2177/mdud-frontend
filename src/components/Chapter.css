@@ -1,0 +1,27 @@
+.home-btn {
+  cursor: pointer;
+}
+.chapter-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.chapter-navigation-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 95px;
+  background: var(--mainBg);
+}
+.chapter-navigation-container p {
+  font-size: 18px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: var(--secGray);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}

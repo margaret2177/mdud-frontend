@@ -1,0 +1,27 @@
+.list {
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  gap: 20px;
+}
+@media screen and (max-width: 650px) {
+  .list {
+    padding: 0;
+  }
+}
+.l-title {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 34px;
+  font-weight: 400;
+  color: #000;
+}
+.l-item-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,19 @@
+.genre-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  align-items: center;
+  font-size: 14px;
+  color: #000;
+}
+.g-links-container > span {
+  margin-right: 40px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.g-links-container > span:hover {
+  color: var(--mainBlue);
+}
+.g-links-btn {
+  color: var(--mainBlue);
+}
