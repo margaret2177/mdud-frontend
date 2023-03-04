@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './Home.css';
-import Banner from './Banner';
-import Details from './Details';
-import ChapterList from './ChapterList';
-import GenreLinks from './GenreLinks';
-import List from './List';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "./Home.css";
+import Banner from "./Banner";
+import Details from "./Details";
+import ChapterList from "./ChapterList";
+import GenreLinks from "./GenreLinks";
+import List from "./List";
 
 const Home = () => {
   const [datas, setDatas] = useState([]);
@@ -15,7 +15,9 @@ const Home = () => {
     const fetchDatas = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get('/api/home');
+        const { data } = await axios.get(
+          "https://dud-backend.onrender.com/api/home"
+        );
         setDatas(data);
         setLoading(false);
       } catch (error) {
@@ -27,14 +29,14 @@ const Home = () => {
   }, []);
   console.log(datas && datas);
   return (
-    <div className='home' style={{ paddingTop: '50px' }}>
+    <div className="home" style={{ paddingTop: "50px" }}>
       {/* <GenreLinks /> */}
       {!loading && <Banner data={datas} />}
       {loading ? (
-        <p style={{ padding: '20px 10%', textAlign: 'center' }}>Loading</p>
+        <p style={{ padding: "20px 10%", textAlign: "center" }}>Loading</p>
       ) : (
         <>
-          <List title={'Featured'} data={datas} />
+          <List title={"Featured"} data={datas} />
           {/* <List title={"Editor's Choice"} data={datas} /> */}
         </>
       )}

@@ -1,8 +1,8 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import ComicViewer from 'react-comic-viewer';
-import { useParams, useNavigate } from 'react-router-dom';
-import './Chapter.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import ComicViewer from "react-comic-viewer";
+import { useParams, useNavigate } from "react-router-dom";
+import "./Chapter.css";
 
 const Chapter = () => {
   const navigate = useNavigate();
@@ -11,21 +11,23 @@ const Chapter = () => {
 
   useEffect(() => {
     const fetchItem = async () => {
-      const { data } = await axios.get(`/api/${url}/chapter/${chap}`);
+      const { data } = await axios.get(
+        `https://dud-backend.onrender.com/api/${url}/chapter/${chap}`
+      );
       setItems(data);
     };
     fetchItem();
   }, [url, chap]);
 
   return (
-    <div className='chapter'>
+    <div className="chapter">
       <ComicViewer pages={items} initialIsExpansion={true} />
-      <div className='chapter-navigation-container'>
-        <div className='home-btn' onClick={() => navigate(`/details/${url}`)}>
+      <div className="chapter-navigation-container">
+        <div className="home-btn" onClick={() => navigate(`/details/${url}`)}>
           <h1>Home</h1>
         </div>
-        <div className='chapter-btn'>
-          {' '}
+        <div className="chapter-btn">
+          {" "}
           {items && items.length > 1 && (
             <p onClick={() => navigate(`/chapter/${chap - 1}`)}>
               <span>icon</span> Previous
